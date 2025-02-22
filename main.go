@@ -8,18 +8,11 @@ import (
 	"net/http"
 )
 
-type PokemonEntry struct {
-	EntryNumber    int `json:"entry_number"`
-	PokemonSpecies struct {
-		Name string `json:name`
-	} `json:"pokemon_species"`
-}
-
-type Response struct {
-	PokemonEntries []PokemonEntry `json:"pokemon_entries"`
-}
-
 func main() {
+	//initialise db
+
+	//FeedbackEntry into table
+
 	response, err := http.Get("http://pokeapi.co/api/v2/pokedex/kanto/")
 
 	if err != nil {
